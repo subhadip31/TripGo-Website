@@ -16,7 +16,7 @@ body {
   gap: 0px;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px;
   background-color: white;
   position: sticky;
   top: 0;
@@ -36,7 +36,7 @@ body {
   width: 30px;
 }
 .navbar .left a p {
-  font-size: 25pt;
+  font-size: 30px;
   font-weight: bold;
 }
 .navbar .right ul {
@@ -108,12 +108,12 @@ body {
 
 .destination, .destination .recent-trips {
   background-color: white;
-  padding: 40px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
   flex-direction: column;
+  padding-inline: 20px;
 }
 .destination h1, .destination .recent-trips h1 {
   margin-top: 45px;
@@ -123,39 +123,39 @@ body {
 .destination p, .destination .recent-trips p {
   text-align: center;
 }
-.destination .row {
+.destination .row, .destination .row-2 {
   display: grid;
   grid-template-columns: auto auto;
   gap: 20px;
 }
-.destination .row .info {
-  width: 100%;
+.destination .row .info, .destination .row-2 .info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0;
+  gap: 15px;
   flex-direction: column;
 }
-.destination .row .info h2 {
+.destination .row .info h2, .destination .row-2 .info h2 {
   font-size: 1.75rem;
+  text-align: center;
 }
-.destination .row .info p {
+.destination .row .info p, .destination .row-2 .info p {
   font-size: 1.0625rem;
   text-align: left;
 }
-.destination .row .row-images {
+.destination .row .row-images, .destination .row-2 .row-images {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 10px;
   flex-direction: row;
   padding: 10px;
 }
-.destination .row .row-images img {
-  max-height: 300px;
+.destination .row .row-images img, .destination .row-2 .row-images img {
+  width: 250px;
   border-radius: 10px;
 }
-.destination .row .row-images .img-2 {
+.destination .row .row-images .img-2, .destination .row-2 .row-images .img-2 {
   position: relative;
   top: 10px;
 }
@@ -166,7 +166,7 @@ body {
   gap: 20px;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .destination .recent-trips .recent-trips-card .card {
   padding: 10px;
@@ -346,18 +346,38 @@ body {
     border-bottom: 2px solid #25819C;
     background-color: transparent;
   }
+  .destination .row .row-images .img-1, .destination .row-2 .row-images .img-1 {
+    display: none;
+  }
   .footer .terms-contd {
     margin-top: 10px;
   }
 }
 @media (max-width: 950px) {
-  .destination .row {
-    display: block;
+  .destination .row, .destination .row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column;
   }
-  .destination .row .info {
+  .destination .row .info, .destination .row-2 .info {
+    width: 90vw;
+  }
+  .destination .row .row-images, .destination .row-2 .row-images {
+    margin-bottom: 40px;
+  }
+  .destination .row .recent-trips, .destination .row-2 .recent-trips {
     padding: 0 20px;
   }
-  .destination .recent-trips {
-    padding: 20px 20px;
+  .destination .row-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: column-reverse;
+  }
+  .destination .row-2 .row-images {
+    margin-bottom: 0;
   }
 }/*# sourceMappingURL=style.css.map */

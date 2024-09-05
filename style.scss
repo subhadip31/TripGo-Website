@@ -66,7 +66,7 @@ $bg-color: black;
 .navbar {
     @include flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px;
     background-color: $fg-color;
     position: sticky;
     top: 0;
@@ -84,7 +84,7 @@ $bg-color: black;
             }
 
             p {
-                font-size: 25pt;
+                font-size: 30px;
                 font-weight: bold;
 
             }
@@ -146,29 +146,28 @@ $bg-color: black;
 
 .destination {
     background-color: $fg-color;
-    padding: 40px 20px;
     @include flex(20px, column);
+    padding-inline: 20px;
 
     h1 {
         @include heading;
     }
-    p{
+
+    p {
         text-align: center;
     }
-
 
     .row {
         display: grid;
         grid-template-columns: auto auto;
         gap: 20px;
-        
+
         .info {
-            width: 100%;
-            @include flex(0, column);
-            
+            @include flex(15px, column);
 
             h2 {
                 font-size: 1.75rem;
+                text-align: center;
             }
 
             p {
@@ -178,11 +177,11 @@ $bg-color: black;
         }
 
         .row-images {
-            @include flex(5px, row);
+            @include flex(10px, row);
             padding: 10px;
 
             img {
-                max-height: 300px;
+                width: 250px;
                 border-radius: 10px;
             }
 
@@ -194,13 +193,17 @@ $bg-color: black;
         }
     }
 
+    .row-2{
+        @extend .row;
+    }
+
     .recent-trips {
         @extend .destination;
 
         .recent-trips-card {
             @include flex(20px, row);
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 10px;
 
             .card {
                 padding: 10px;
@@ -358,6 +361,16 @@ $bg-color: black;
         }
     }
 
+    .destination{
+        .row{
+            .row-images {
+                .img-1 {
+                    display: none;
+                }
+            }
+        }
+    }
+
     .footer {
         .terms-contd {
             margin-top: 10px;
@@ -369,15 +382,25 @@ $bg-color: black;
 @media (max-width : 950px) {
     .destination {
         .row {
-            display: block;
+            @include flex(20px, column);
 
             .info {
+                width: 90vw;
+            }
+
+            .row-images{
+                margin-bottom: 40px;
+            }
+            .recent-trips {
                 padding: 0 20px;
             }
         }
 
-        .recent-trips {
-            padding: 20px 20px;
+        .row-2{
+            @include flex(20px, column-reverse);
+            .row-images{
+                margin-bottom: 0;
+            }
         }
     }
 }
