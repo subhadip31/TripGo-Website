@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TripGo</title>
-    <link rel="shortcut icon" href="/assests/travel.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/assets/travel.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,17 +19,27 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="navbar">
       <div class="left">
         <a href="index.html">
-          <img src="/assests/travel.png" alt="" />
+          <img src="/assets/travel.png" alt="" />
           <p>TripGo</p>
         </a>
       </div>
       <div class="right">
         <ul>
+          <li><button class="hamburger-btn">☰</button></li>
+          <li><a href="#main">Home</a></li>
+          <li><a href="#dest">Destinations</a></li>
+          <li><a href="#abt">About</a></li>
+          <li><a href="#ct">Contact</a></li>
+        </ul>
+
+        <ul class="side-bar">
+          <li><button class="hamburger-btn-close">×</button></li>
           <li><a href="#main">Home</a></li>
           <li><a href="#dest">Destinations</a></li>
           <li><a href="#abt">About</a></li>
@@ -65,17 +75,17 @@
           </p>
         </div>
         <div class="row-images">
-          <img src="/assests/mount-etna-1.jpg" alt="" class="img-1"/>
-          <img src="/assests/mount-etna-2.jpg" alt="" class="img-2" />
+          <img src="/assets/mount-etna-1.jpg" alt="" class="img-1"/>
+          <img src="/assets/mount-etna-2.jpg" alt="" class="img-2" />
         </div>
       </div>
       <div class="row-2">
         <div class="row-images">
           <div class="pic-1">
-            <img src="/assests/phi-phi-1.jpg" alt="" class="img-1" />
+            <img src="/assets/phi-phi-1.jpg" alt="" class="img-1" />
           </div>
           <div class="pic-2">
-            <img src="/assests/phi-phi-2.jpg" alt="" class="img-2" />
+            <img src="/assets/phi-phi-2.jpg" alt="" class="img-2" />
           </div>
         </div>
         <div class="info">
@@ -98,7 +108,7 @@
         <p>Choose your next international trip from our recent trips</p>
         <div class="recent-trips-card">
           <div class="card">
-            <img src="/assests/india.jpg" alt="" />
+            <img src="/assets/india.jpg" alt="" />
             <h2>Trip in India</h2>
             <p>
               India, a land of contrasts and captivating experiences, offers a
@@ -109,7 +119,7 @@
             </p>
           </div>
           <div class="card">
-            <img src="/assests/japan.jpg" alt="" />
+            <img src="/assets/japan.jpg" alt="" />
             <h2>Trip in Japan</h2>
             <p>
               Discover the magic of Japan in a whirlwind adventure. From the
@@ -120,7 +130,7 @@
             </p>
           </div>
           <div class="card">
-            <img src="/assests/america.jpg" alt="" />
+            <img src="/assets/america.jpg" alt="" />
             <h2>Trip in America</h2>
             <p>
               From the iconic Golden Gate Bridge to the vibrant energy of New
@@ -186,7 +196,7 @@
     <div class="footer">
       <div class="left">
         <a href="index.html">
-          <img src="/assests/travel.png" alt="" />
+          <img src="/assets/travel.png" alt="" />
           <h1>TripGo</h1>
         </a>
         <p>Choose your favorite destination. <br />Find us in social media</p>

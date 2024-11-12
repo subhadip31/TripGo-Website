@@ -97,8 +97,6 @@ $bg-color: black;
 
             li {
                 list-style: none;
-                // margin-right: 25px;
-
                 a {
                     text-decoration: none;
                     color: black;
@@ -112,6 +110,50 @@ $bg-color: black;
                         background-color: #25819C;
                     }
                 }
+                .hamburger-btn {
+                    background-color: transparent;
+                    color: black;
+                    border: none;
+                    outline: none;
+                    font-size: 32px;
+                    cursor: pointer;
+                    display: none;
+                }
+            }
+        }
+        .side-bar{
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 100vh;
+            width: 250px;
+            z-index: 4;
+            background-color: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            box-shadow: -10px 0px 10px rgba(0,0,0,0.1);
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            row-gap: 15px;
+            li{
+                width: 100%;
+                align-self: center;
+                a{
+                    width: 100%;
+                    display: block;
+                    border-radius: 0;
+                }
+                .hamburger-btn-close{
+                    background-color: transparent;
+                    color: black;
+                    border: none;
+                    outline: none;
+                    font-size: 32px;
+                    cursor: pointer;
+                    position: relative;
+                    left: 10px;
+                    top: 10px;
+                }
             }
         }
     }
@@ -120,9 +162,10 @@ $bg-color: black;
 .main-landing {
     @include flex(0, column);
     padding: 20px;
-    background-image: url(/assests/background-mt.jpg);
+    background-image: url(/assets/background-mt.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    scroll-margin-top: 40px;
 
     h1 {
         margin-top: 150px;
@@ -148,6 +191,7 @@ $bg-color: black;
     background-color: $fg-color;
     @include flex(20px, column);
     padding-inline: 20px;
+    scroll-margin-top: 40px;
 
     h1 {
         @include heading;
@@ -233,8 +277,9 @@ $bg-color: black;
 }
 
 .about {
+    scroll-margin-top: 60px;
     .about-header {
-        @include img-header("/assests/about-bg.jpg");
+        @include img-header("/assets/about-bg.jpg");
 
     }
 
@@ -253,8 +298,9 @@ $bg-color: black;
 }
 
 .contact {
+    scroll-margin-top: 60px;
     .contact-header {
-        @include img-header("/assests/contact-bg.jpg");
+        @include img-header("/assets/contact-bg.jpg");
     }
 
     .contact-form {
@@ -287,6 +333,7 @@ $bg-color: black;
 
             button {
                 @include btn();
+                margin-bottom: 20px;
                 background-color: lightgray;
             }
         }
@@ -345,16 +392,11 @@ $bg-color: black;
 
                 li {
 
-                    a {
-                        padding: 0;
-                        border-radius: 0;
-                        transition: none;
-
-                        &:hover {
-                            color: black;
-                            border-bottom: 2px solid #25819C;
-                            background-color: transparent;
-                        }
+                    a{
+                        display: none;
+                    }
+                    .hamburger-btn {
+                        display: block;
                     }
                 }
             }
